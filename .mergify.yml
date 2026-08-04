@@ -1,4 +1,7 @@
-queue_rules:
-  - name: default
-    merge_conditions: []
-pull_request_rules: []
+pull_request_rules:
+  - name: ci-gated-merge
+    conditions:
+      - base=main
+      - check-success=slow-ci
+    actions:
+      merge:
