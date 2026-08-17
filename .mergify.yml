@@ -3,3 +3,4 @@ queue_rules:
     queue_conditions:
       - "-draft"
     merge_conditions: []
+    update_method: rebase
