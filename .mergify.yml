@@ -1,7 +1,6 @@
-pull_request_rules:
-  - name: ci-gated-merge
-    conditions:
-      - base=main
-      - check-success=slow-ci
-    actions:
-      merge:
+queue_rules:
+  - name: default
+    queue_conditions:
+      - "#approved-reviews-by>=1"
+    merge_conditions:
+      - "#approved-reviews-by>=1"
