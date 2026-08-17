@@ -1,6 +1,6 @@
 queue_rules:
   - name: default
     queue_conditions:
-      - "#approved-reviews-by>=1"
+      - "-draft"
     merge_conditions:
       - "#approved-reviews-by>=1"
